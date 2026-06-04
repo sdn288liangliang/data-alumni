@@ -31,29 +31,6 @@
   <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
   <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
 
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    table.dataTable thead {
-      background-color: #720505;
-      color: white;
-    }
-
-    table.dataTable tbody tr:nth-child(odd) {
-      background-color: #f8f9fa;
-    }
-
-    .checkbox-container {
-      background-color: white;
-      padding: 15px 20px 10px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      margin-bottom: 10px;
-    }
-  </style>
-
 </head>
 
 <body class="blog-page">
@@ -193,7 +170,6 @@
           <thead>
             <tr>
   `;
-
         // Header tabel
         values[0].forEach(header => {
           html += `<th>${header}</th>`;
@@ -237,7 +213,7 @@
           ordering: true,
           searching: true,
           info: true,
-          pageLength: 25,
+          pageLength: 10,
           lengthMenu: [
             [25, 50, 100, -1],
             [25, 50, 100, "Semua"]
@@ -269,7 +245,6 @@
       async function init() {
         const sheetNames =
           await getSheetNames();
-
         const select =
           document.getElementById("tahunSelect");
 
