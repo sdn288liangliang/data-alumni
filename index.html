@@ -117,7 +117,7 @@
     <div class="container mt-4 mb-5" style="font-size: 73%;" data-aos="fade-up">
       <div class="row mb-3">
         <div class="col-12 col-md-8 mx-auto">
-          <label class="form-label fw-bold">
+          <label class="form-label fw-bold fs-5">
             Pilih Tahun Ajaran
           </label>
           <select id="tahunSelect" class="form-select">
@@ -126,7 +126,7 @@
       </div>
 
       <div class="row">
-        <div id="sheetContainer" class="col-12 col-md-8">
+        <div id="sheetContainer" class="col-12 col-md-8 mx-auto">
         </div>
       </div>
     </div>
@@ -135,11 +135,9 @@
       const API_KEY = "AIzaSyBbMQ9uKpNyatkhtdRMuopsQ6GZoCiw0Kc";
       const SHEET_ID = "1BlUT1rqEnTf2VNgY5qpYDDd_Z16-bUHKo0F5tvLGgnk";
 
-      /*
-      Urutkan dari yang terbaru ke yang terlama
+      /*Urutkan dari yang terbaru ke yang terlama
       Nama harus sama persis dengan nama sheet
       */
-
       const SHEET_ORDER = [
         "2025-2026",
         "2024-2025",
@@ -182,7 +180,7 @@
           document.getElementById("sheetContainer");
         let html = `
   <div class="card shadow-sm border-0">
-    <div class="card-header bg-danger text-white fw-bold text-center">
+    <div class="card-header bg-danger text-white fw-bold text-center fs-5">
       Data Alumni Tahun Ajaran ${sheetName}
     </div>
 
